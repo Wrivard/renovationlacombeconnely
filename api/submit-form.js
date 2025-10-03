@@ -38,16 +38,14 @@ export default async function handler(req, res) {
       });
     }
 
-    // Initialize Resend
-    if (!process.env.RESEND_API_KEY) {
-      throw new Error('RESEND_API_KEY environment variable missing');
-    }
-    
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    // Initialize Resend with hardcoded API key for testing
+    // In production, this should use process.env.RESEND_API_KEY
+    const resendApiKey = 're_cULS7BvM_JA1bPvo3cXvQKUXWkb68FPNy';
+    const resend = new Resend(resendApiKey);
     const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev';
     
     // ⚠️ HARDCODE recipient to prevent environment variable overrides
-    const businessEmail = 'contact@renovationlacombeconnely.com'; // Change this to your actual email
+    const businessEmail = 'wrivard@kua.quebec'; // Testing email
 
     // Budget mapping for better display
     const budgetMap = {
