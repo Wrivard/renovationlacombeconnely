@@ -266,11 +266,39 @@
   /* Fix banner z-index to not overlap mobile menu */
   .banner9_component {
     z-index: 1 !important;
+    position: relative !important;
+  }
+  
+  /* Ensure all banner elements stay below menu */
+  .banner9_content-wrapper,
+  .banner9_content,
+  .banner9_social-icons,
+  .banner9_social-link {
+    z-index: 1 !important;
+    position: relative !important;
   }
   
   /* Ensure mobile menu has higher z-index than banner */
   .navbar3_menu {
     z-index: 1000 !important;
+  }
+  
+  /* Ensure mobile menu background also has high z-index */
+  .navbar3_menu-background {
+    z-index: 999 !important;
+  }
+  
+  /* Ensure logo is visible and properly styled in mobile menu */
+  .navbar3_logo-link-menu {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 2rem 0 !important;
+  }
+  
+  .navbar3_logo-link-menu .navbar3_logo {
+    max-width: 200px !important;
+    height: auto !important;
   }
   
   /* Fix services dropdown on mobile */
@@ -312,18 +340,26 @@
   /* Replace black Menu button with Soumission button styling */
   .navbar3_tablet-menu-button {
     background-color: #d3af37 !important;
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
     color: #000 !important;
     border: 2px solid #d3af37 !important;
     border-radius: 6px !important;
     font-weight: 600 !important;
     text-decoration: none !important;
     transition: all 0.3s ease !important;
+    box-shadow: 0 2px 8px rgba(211, 175, 55, 0.3) !important;
   }
   
   .navbar3_tablet-menu-button:hover {
-    background-color: #b8941f !important;
+    background: linear-gradient(135deg, #b8941f, #d3af37) !important;
     border-color: #b8941f !important;
     transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+  }
+  
+  .navbar3_tablet-menu-button:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 6px rgba(211, 175, 55, 0.3) !important;
   }
 }
 
