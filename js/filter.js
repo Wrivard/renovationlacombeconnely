@@ -12,19 +12,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Find and activate the matching button
     const matchingButton = Array.from(filterButtons).find(btn => {
       const btnCategory = btn.querySelector('div').textContent.trim().toLowerCase();
-      return btnCategory === category || (category === null && btnCategory === 'voir tout');
+      return btnCategory === category;
     });
     
     if (matchingButton) {
       matchingButton.classList.add('active');
-    }
-    
-    // Show all items if "Voir tout" is clicked or no filter
-    if (category === null || category === 'voir tout') {
-      projectItems.forEach(item => {
-        item.style.display = 'block';
-      });
-      return;
     }
     
     // Filter items based on category
@@ -42,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Function to update URL with query parameter (no page reload)
   function updateURL(filterValue) {
     const url = new URL(window.location.href);
-    if (filterValue === 'voir tout' || filterValue === null) {
-      url.searchParams.delete('filter');
-    } else {
+    if (filterValue) {
       url.searchParams.set('filter', filterValue);
+    } else {
+      url.searchParams.delete('filter');
     }
     history.replaceState(null, '', url.toString());
   }
@@ -73,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (filterParam) {
     applyFilter(filterParam);
   } else {
-    // Set "Voir tout" as active by default
-    applyFilter('voir tout');
+    // Set "Salle de bain" as active by default
+    applyFilter('salle de bain');
   }
   
   // Handle browser back/forward navigation
@@ -85,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (filterParam) {
       applyFilter(filterParam);
     } else {
-      applyFilter('voir tout');
+      applyFilter('salle de bain');
     }
   });
 });
