@@ -7,7 +7,7 @@ const resend = new Resend('re_cULS7BvM_JA1bPvo3cXvQKUXWkb68FPNy');
 // Configuration
 const config = {
   fromEmail: 'onboarding@resend.dev', // Using Resend test email for verification
-  toEmail: 'wrivard@kua.quebec', // Your test email
+  toEmail: 'williamrivard@live.ca', // Your authorized email for testing
   businessName: 'Rénovation Lacombe Connely'
 };
 
