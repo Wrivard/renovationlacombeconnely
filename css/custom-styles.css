@@ -37,39 +37,39 @@
 /* Mobile styles - improved for best practices */
 @media screen and (max-width: 767px) {
   .category-filter-menu {
-    overflow-x: auto;
-    white-space: nowrap;
-    flex-wrap: nowrap;
-    padding: 15px 0;
-    margin: 0 -15px 20px -15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    position: relative;
-  }
-  
-  .category-filter-menu::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
   }
   
   .category-filter-link {
-    padding: 10px 16px;
+    padding: 12px 10px;
     font-size: 14px;
-    flex: 0 0 auto;
-    min-width: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 45px;
+    width: 100%;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 479px) {
+  .category-filter-menu {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 10px;
   }
   
-  /* Add visual indicator that there are more items */
-  .category-filter-menu::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 30px;
-    height: 100%;
-    background: linear-gradient(to right, transparent, rgba(255,255,255,0.9));
-    pointer-events: none;
+  .category-filter-link {
+    padding: 10px 8px;
+    font-size: 13px;
+    min-height: 40px;
   }
 }
 
@@ -149,4 +149,75 @@
   text-align: center;
   margin-top: 10px;
   font-size: 16px;
+}
+
+/* Custom 404 page styles */
+.error-404-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 60vh;
+  background-color: #f9f9f9;
+}
+
+.error-404-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+  max-height: 300px;
+}
+
+.error-404-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #d3af37;
+  font-weight: 700;
+}
+
+.error-404-text {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.error-404-button {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #d3af37;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 16px;
+}
+
+.error-404-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #c19f2e;
+}
+
+@media screen and (max-width: 767px) {
+  .error-404-container {
+    padding: 60px 20px;
+  }
+  
+  .error-404-title {
+    font-size: 2.5rem;
+  }
+  
+  .error-404-text {
+    font-size: 1rem;
+  }
+  
+  .error-404-button {
+    padding: 10px 20px;
+  }
 }
