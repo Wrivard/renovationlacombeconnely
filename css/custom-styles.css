@@ -285,18 +285,18 @@
   
   /* Ensure mobile menu has higher z-index than banner */
   .navbar3_menu {
-    z-index: 1000 !important;
+    z-index: 9999 !important;
     position: relative !important;
   }
   
   /* Ensure mobile menu background also has high z-index */
   .navbar3_menu-background {
-    z-index: 999 !important;
+    z-index: 9998 !important;
   }
   
   /* Force mobile menu to appear above everything */
   .navbar3_menu * {
-    z-index: 1000 !important;
+    z-index: 9999 !important;
   }
   
   /* Ensure logo is visible and properly styled in mobile menu */
@@ -354,11 +354,17 @@
     background: linear-gradient(135deg, #d3af37, #b8941f) !important;
     color: #000 !important;
     border: 2px solid #d3af37 !important;
-    border-radius: 6px !important;
-    font-weight: 600 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
     text-decoration: none !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 2px 8px rgba(211, 175, 55, 0.3) !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+    padding: 12px 24px !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    margin-top: 20px !important;
   }
   
   .navbar3_tablet-menu-button:hover {
@@ -371,6 +377,13 @@
   .navbar3_tablet-menu-button:active {
     transform: translateY(0) !important;
     box-shadow: 0 2px 6px rgba(211, 175, 55, 0.3) !important;
+  }
+  
+  /* Additional specificity for Soumission button */
+  .navbar3_menu .navbar3_tablet-menu-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    color: #000 !important;
+    border: 2px solid #d3af37 !important;
   }
 }
 
