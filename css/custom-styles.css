@@ -265,7 +265,7 @@
 @media screen and (max-width: 767px) {
   /* Fix banner z-index to not overlap mobile menu */
   .banner9_component {
-    z-index: 0 !important;
+    z-index: -1 !important;
     position: relative !important;
   }
   
@@ -274,13 +274,20 @@
   .banner9_content,
   .banner9_social-icons,
   .banner9_social-link {
-    z-index: 0 !important;
+    z-index: -1 !important;
     position: relative !important;
   }
   
   /* Force banner to stay below everything */
   .banner9_component * {
-    z-index: 0 !important;
+    z-index: -1 !important;
+  }
+  
+  /* Additional banner fix */
+  .banner9_component,
+  .banner9_component * {
+    z-index: -1 !important;
+    position: relative !important;
   }
   
   /* Ensure mobile menu has higher z-index than banner */
@@ -403,6 +410,54 @@
     background: linear-gradient(135deg, #d3af37, #b8941f) !important;
     background-color: #d3af37 !important;
     color: #000 !important;
+    border: 2px solid #d3af37 !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+  }
+  
+  /* Override w-button class specifically */
+  .w-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000 !important;
+    border: 2px solid #d3af37 !important;
+  }
+  
+  /* Target the specific button in mobile menu */
+  .navbar3_menu a.w-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000 !important;
+    border: 2px solid #d3af37 !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+  }
+  
+  /* Fix current page text color - make it white */
+  .navbar3_link.w--current {
+    color: #ffffff !important;
+    background-color: rgba(211, 175, 55, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+  }
+  
+  /* Ensure all navbar links are white */
+  .navbar3_link {
+    color: #ffffff !important;
+  }
+  
+  /* Ultra-specific button targeting */
+  .navbar3_component .navbar3_container .navbar3_menu .navbar3_tablet-menu-button.w-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000000 !important;
+    border: 2px solid #d3af37 !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+  }
+  
+  /* Force button styling with inline style override */
+  a[href="/soumission"].navbar3_tablet-menu-button.w-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000000 !important;
     border: 2px solid #d3af37 !important;
     box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
   }
