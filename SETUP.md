@@ -937,7 +937,21 @@ if (typeof grecaptcha !== 'undefined') {
    - Import the GitHub repository
    - Deploy the project
 
-2. **Set Environment Variables**:
+2. **⚠️ CRITICAL VERCEL SETTINGS**:
+   **AGENT**: Instruct user to configure these settings in Vercel Dashboard → Project → Settings:
+   
+   **Build & Output Settings:**
+   - **Framework Preset**: "Other" or "Static Site"
+   - **Build Command**: Leave **EMPTY** (no build step needed)
+   - **Output Directory**: Override = ON, value = **EMPTY** (not `/public`)
+   - **Root Directory**: Leave **EMPTY** (since index.html is at repo root)
+   
+   **⚠️ IMPORTANT**: Do NOT use a `/public` folder for Vercel static sites. If you have a `/public` folder:
+   - Move all files from `/public` to the root directory (e.g., `/images`)
+   - Delete the `/public` folder completely
+   - Vercel will use `/public` as output directory if it exists, causing 404 errors
+
+3. **Set Environment Variables**:
    **AGENT**: Instruct user to add these in Vercel Dashboard → Project → Settings → Environment Variables:
    - `RESEND_API_KEY` = [value from Phase 2]
    - `FROM_EMAIL` = [value from Phase 2]
@@ -1488,7 +1502,16 @@ git commit -m "🌐 Add: Clean URLs support for local development"
 
 ## 🚨 **Common Issues & Solutions (Real-World Fixes)**
 
-### **🔴 CRITICAL: Email Sending Issues**
+### **🔴 CRITICAL: Vercel 404 Errors**
+
+#### **Issue**: All pages return 404 errors on Vercel
+**Root Cause**: Vercel is using `/public` folder as output directory instead of root
+**Solution**: 
+1. **Move files**: Move all content from `/public` to root directory (e.g., `/images`)
+2. **Delete folder**: Remove the `/public` folder completely
+3. **Vercel settings**: Set Output Directory to **EMPTY** (not `/public`)
+4. **Framework**: Set to "Other" or "Static Site"
+5. **Root Directory**: Leave **EMPTY**
 
 #### **Issue**: "You can only send testing emails to your own email address"
 **Root Cause**: Using `onboarding@resend.dev` as FROM_EMAIL without domain verification
