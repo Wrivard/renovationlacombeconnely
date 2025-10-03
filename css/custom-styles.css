@@ -261,6 +261,72 @@
   word-wrap: break-word;
 }
 
+/* Mobile Navigation Fixes */
+@media screen and (max-width: 767px) {
+  /* Fix banner z-index to not overlap mobile menu */
+  .banner9_component {
+    z-index: 1 !important;
+  }
+  
+  /* Ensure mobile menu has higher z-index than banner */
+  .navbar3_menu {
+    z-index: 1000 !important;
+  }
+  
+  /* Fix services dropdown on mobile */
+  .navbar3_menu-dropdown {
+    position: relative !important;
+  }
+  
+  .navbar3_dropdown-list {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-color: var(--color-scheme-1--background) !important;
+    border: 1px solid var(--color-scheme-1--border) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(-10px) !important;
+    transition: all 0.3s ease !important;
+    z-index: 1001 !important;
+  }
+  
+  .navbar3_dropdown-list.w--open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+  
+  .navbar3_dropdown-link {
+    padding: 0.75rem 1rem !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .navbar3_dropdown-link:last-child {
+    border-bottom: none !important;
+  }
+  
+  /* Replace black Menu button with Soumission button styling */
+  .navbar3_tablet-menu-button {
+    background-color: #d3af37 !important;
+    color: #000 !important;
+    border: 2px solid #d3af37 !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .navbar3_tablet-menu-button:hover {
+    background-color: #b8941f !important;
+    border-color: #b8941f !important;
+    transform: translateY(-1px) !important;
+  }
+}
+
 /* Custom 404 page styles */
 .error-404-container {
   display: flex;
