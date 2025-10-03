@@ -34,6 +34,19 @@ document.addEventListener('DOMContentLoaded', function() {
       currentLink.style.padding = '8px 12px';
     }
     
+    // Fix Services dropdown current page items
+    const servicesDropdownLinks = document.querySelectorAll('.navbar3_dropdown-list .navbar3_link');
+    servicesDropdownLinks.forEach(link => {
+      if (link.classList.contains('w--current')) {
+        link.style.color = '#ffffff';
+        link.style.backgroundColor = 'rgba(211, 175, 55, 0.2)';
+        link.style.borderRadius = '4px';
+        link.style.padding = '8px 12px';
+      } else {
+        link.style.color = '#ffffff';
+      }
+    });
+    
     // Fix all navbar links
     const allLinks = document.querySelectorAll('.navbar3_link');
     allLinks.forEach(link => {

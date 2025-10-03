@@ -263,10 +263,6 @@
 
 /* Mobile Navigation Fixes */
 @media screen and (max-width: 767px) {
-  /* TEST: Make body background red to verify mobile CSS is loading */
-  body {
-    background-color: red !important;
-  }
   /* Fix banner z-index to not overlap mobile menu */
   .banner9_component {
     z-index: -1 !important;
@@ -445,6 +441,19 @@
   
   /* Ensure all navbar links are white */
   .navbar3_link {
+    color: #ffffff !important;
+  }
+  
+  /* Fix Services dropdown current page items */
+  .navbar3_dropdown-list .navbar3_link.w--current {
+    color: #ffffff !important;
+    background-color: rgba(211, 175, 55, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+  }
+  
+  /* Ensure all Services dropdown links are white */
+  .navbar3_dropdown-list .navbar3_link {
     color: #ffffff !important;
   }
   
