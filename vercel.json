@@ -1,7 +1,10 @@
 {
-  "cleanUrls": false,
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/index.html" },
     { "source": "/(css|js|images|assets|fonts)/(.*)", "destination": "/$1/$2" }
+  ],
+  "redirects": [
+    { "source": "/:slug.html", "destination": "/:slug", "permanent": true }
   ]
 }
