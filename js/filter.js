@@ -1,80 +1,60 @@
-// Filter functionality for realisations page
+// Filter functionality for realisations page - simplified version
 document.addEventListener('DOMContentLoaded', function() {
   // Get all filter buttons and project items
   const filterButtons = document.querySelectorAll('.category-filter-link');
   const projectItems = document.querySelectorAll('.blog6_item');
   
-  // Function to apply filter
-  function applyFilter(category) {
-    // Remove active class from all buttons
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    
-    // Find and activate the matching button
-    const matchingButton = Array.from(filterButtons).find(btn => {
-      const btnCategory = btn.querySelector('div').textContent.trim().toLowerCase();
-      return btnCategory === category || (category === null && btnCategory === 'voir tout');
-    });
-    
-    if (matchingButton) {
-      matchingButton.classList.add('active');
-    }
-    
-    // Show all items if "Voir tout" is clicked or no filter
-    if (category === null || category === 'voir tout') {
-      projectItems.forEach(item => {
-        item.style.display = 'block';
-      });
-      return;
-    }
-    
-    // Filter items based on category
-    projectItems.forEach(item => {
-      const itemCategory = item.querySelector('.tag.is-alternate.rea').textContent.trim().toLowerCase();
-      
-      if (itemCategory === category) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
-  
   // Add click event listeners to filter buttons
   filterButtons.forEach(button => {
     button.addEventListener('click', function(e) {
-      e.preventDefault();
+      // Don't prevent default - allow normal hash navigation
+      
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Add active class to clicked button
+      this.classList.add('active');
       
       // Get category to filter by
       const category = this.querySelector('div').textContent.trim().toLowerCase();
       
-      // Update URL hash without reloading the page
+      // Show all items if "Voir tout" is clicked
       if (category === 'voir tout') {
-        history.pushState(null, null, ' '); // Remove hash
-      } else {
-        history.pushState(null, null, `#${category}`);
+        projectItems.forEach(item => {
+          item.style.display = 'block';
+        });
+        return;
       }
       
-      // Apply filter
-      applyFilter(category);
+      // Filter items based on category
+      projectItems.forEach(item => {
+        const itemCategory = item.querySelector('.tag.is-alternate.rea').textContent.trim().toLowerCase();
+        
+        if (itemCategory === category) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
     });
   });
   
   // Check if there's a hash in the URL for filtering
   if (window.location.hash) {
     const category = window.location.hash.substring(1); // Remove the # character
-    applyFilter(category);
+    const matchingButton = Array.from(filterButtons).find(btn => {
+      const btnCategory = btn.querySelector('div').textContent.trim().toLowerCase();
+      return btnCategory === category;
+    });
+    
+    if (matchingButton) {
+      matchingButton.click();
+    }
   } else {
     // Set "Voir tout" as active by default
-    applyFilter('voir tout');
-  }
-  
-  // Handle browser back/forward navigation
-  window.addEventListener('popstate', function() {
-    if (window.location.hash) {
-      const category = window.location.hash.substring(1);
-      applyFilter(category);
-    } else {
-      applyFilter('voir tout');
+    const showAllButton = document.querySelector('.category-filter-link:first-child');
+    if (showAllButton) {
+      showAllButton.click();
     }
-  });
+  }
 });
