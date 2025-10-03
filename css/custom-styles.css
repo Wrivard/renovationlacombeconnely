@@ -486,6 +486,30 @@
     border: 2px solid #d3af37 !important;
     box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
   }
+  
+  /* Target any Soumission button in mobile menu */
+  .navbar3_menu a[href="/soumission"] {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000000 !important;
+    border: 2px solid #d3af37 !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 12px 24px !important;
+  }
+  
+  /* Target w-button class in mobile menu */
+  .navbar3_menu .w-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000000 !important;
+    border: 2px solid #d3af37 !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    padding: 12px 24px !important;
+  }
 }
 
 /* Custom 404 page styles */

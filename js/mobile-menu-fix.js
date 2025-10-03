@@ -9,8 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
   function fixSoumissionButton() {
     if (!isMobile()) return;
     
+    // Target the mobile menu button specifically
     const soumissionButton = document.querySelector('.navbar3_tablet-menu-button');
     if (soumissionButton) {
+      console.log('Found navbar3_tablet-menu-button, applying gold styling');
       soumissionButton.style.background = 'linear-gradient(135deg, #d3af37, #b8941f)';
       soumissionButton.style.backgroundColor = '#d3af37';
       soumissionButton.style.color = '#000000';
@@ -19,7 +21,25 @@ document.addEventListener('DOMContentLoaded', function() {
       soumissionButton.style.borderRadius = '8px';
       soumissionButton.style.fontWeight = '700';
       soumissionButton.style.padding = '12px 24px';
+    } else {
+      console.log('navbar3_tablet-menu-button not found');
     }
+    
+    // Also target any w-button in the mobile menu
+    const menuButtons = document.querySelectorAll('.navbar3_menu .w-button');
+    menuButtons.forEach(button => {
+      if (button.textContent.trim() === 'Soumission') {
+        console.log('Found Soumission button in menu, applying gold styling');
+        button.style.background = 'linear-gradient(135deg, #d3af37, #b8941f)';
+        button.style.backgroundColor = '#d3af37';
+        button.style.color = '#000000';
+        button.style.border = '2px solid #d3af37';
+        button.style.boxShadow = '0 4px 12px rgba(211, 175, 55, 0.4)';
+        button.style.borderRadius = '8px';
+        button.style.fontWeight = '700';
+        button.style.padding = '12px 24px';
+      }
+    });
   }
   
   // Fix current page text color
