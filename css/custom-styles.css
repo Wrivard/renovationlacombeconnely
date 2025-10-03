@@ -1,4 +1,4 @@
-/* Custom styles for Renovation Lacombe Connely - Updated 2024-12-19 */
+/* Custom styles for Renovation Lacombe Connely - Updated 2024-12-19 v2 */
 
 /* Filter button styles */
 .category-filter-menu {
@@ -380,10 +380,31 @@
   }
   
   /* Additional specificity for Soumission button */
-  .navbar3_menu .navbar3_tablet-menu-button {
+  .navbar3_menu .navbar3_tablet-menu-button,
+  .navbar3_tablet-menu-button.w-button {
     background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
     color: #000 !important;
     border: 2px solid #d3af37 !important;
+  }
+  
+  /* Override any conflicting styles with maximum specificity */
+  .navbar3_component .navbar3_menu .navbar3_tablet-menu-button {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000 !important;
+    border: 2px solid #d3af37 !important;
+  }
+  
+  /* Nuclear option - target all possible selectors */
+  .navbar3_tablet-menu-button[class*="w-button"],
+  .w-button.navbar3_tablet-menu-button,
+  .navbar3_menu a[class*="navbar3_tablet-menu-button"] {
+    background: linear-gradient(135deg, #d3af37, #b8941f) !important;
+    background-color: #d3af37 !important;
+    color: #000 !important;
+    border: 2px solid #d3af37 !important;
+    box-shadow: 0 4px 12px rgba(211, 175, 55, 0.4) !important;
   }
 }
 
