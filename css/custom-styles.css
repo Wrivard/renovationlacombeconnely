@@ -445,7 +445,7 @@
   }
   
   /* Fix Services dropdown current page items */
-  .navbar3_dropdown-list .navbar3_link.w--current {
+  .navbar3_dropdown-list .navbar3_dropdown-link.w--current {
     color: #ffffff !important;
     background-color: rgba(211, 175, 55, 0.2) !important;
     border-radius: 4px !important;
@@ -453,7 +453,19 @@
   }
   
   /* Ensure all Services dropdown links are white */
-  .navbar3_dropdown-list .navbar3_link {
+  .navbar3_dropdown-list .navbar3_dropdown-link {
+    color: #ffffff !important;
+  }
+  
+  /* Target w-dropdown-link class as well */
+  .w-dropdown-link.w--current {
+    color: #ffffff !important;
+    background-color: rgba(211, 175, 55, 0.2) !important;
+    border-radius: 4px !important;
+    padding: 8px 12px !important;
+  }
+  
+  .w-dropdown-link {
     color: #ffffff !important;
   }
   

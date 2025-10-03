@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Fix Services dropdown current page items
-    const servicesDropdownLinks = document.querySelectorAll('.navbar3_dropdown-list .navbar3_link');
+    const servicesDropdownLinks = document.querySelectorAll('.navbar3_dropdown-list .navbar3_dropdown-link');
     servicesDropdownLinks.forEach(link => {
       if (link.classList.contains('w--current')) {
         link.style.color = '#ffffff';
@@ -51,6 +51,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const allLinks = document.querySelectorAll('.navbar3_link');
     allLinks.forEach(link => {
       link.style.color = '#ffffff';
+    });
+    
+    // Fix all dropdown links (comprehensive targeting)
+    const allDropdownLinks = document.querySelectorAll('.navbar3_dropdown-link, .w-dropdown-link');
+    allDropdownLinks.forEach(link => {
+      if (link.classList.contains('w--current')) {
+        link.style.color = '#ffffff';
+        link.style.backgroundColor = 'rgba(211, 175, 55, 0.2)';
+        link.style.borderRadius = '4px';
+        link.style.padding = '8px 12px';
+      } else {
+        link.style.color = '#ffffff';
+      }
     });
   }
   
