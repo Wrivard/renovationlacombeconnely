@@ -261,8 +261,8 @@
   word-wrap: break-word;
 }
 
-/* Mobile Navigation Fixes */
-@media screen and (max-width: 767px) {
+/* Mobile and Tablet Navigation Fixes */
+@media screen and (max-width: 991px) {
   /* Fix banner z-index to not overlap mobile menu */
   .banner9_component {
     z-index: -1 !important;

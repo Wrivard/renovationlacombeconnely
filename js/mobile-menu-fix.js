@@ -1,18 +1,17 @@
 // Mobile menu fixes - JavaScript approach
 document.addEventListener('DOMContentLoaded', function() {
-  // Check if we're on mobile
-  function isMobile() {
-    return window.innerWidth <= 767;
+  // Check if we're on mobile or tablet
+  function isMobileOrTablet() {
+    return window.innerWidth <= 991;
   }
   
   // Fix Soumission button styling
   function fixSoumissionButton() {
-    if (!isMobile()) return;
+    if (!isMobileOrTablet()) return;
     
     // Target the mobile menu button specifically
     const soumissionButton = document.querySelector('.navbar3_tablet-menu-button');
     if (soumissionButton) {
-      console.log('Found navbar3_tablet-menu-button, applying gold styling');
       soumissionButton.style.background = 'linear-gradient(135deg, #d3af37, #b8941f)';
       soumissionButton.style.backgroundColor = '#d3af37';
       soumissionButton.style.color = '#000000';
@@ -21,15 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
       soumissionButton.style.borderRadius = '8px';
       soumissionButton.style.fontWeight = '700';
       soumissionButton.style.padding = '12px 24px';
-    } else {
-      console.log('navbar3_tablet-menu-button not found');
     }
     
     // Also target any w-button in the mobile menu
     const menuButtons = document.querySelectorAll('.navbar3_menu .w-button');
     menuButtons.forEach(button => {
       if (button.textContent.trim() === 'Soumission') {
-        console.log('Found Soumission button in menu, applying gold styling');
         button.style.background = 'linear-gradient(135deg, #d3af37, #b8941f)';
         button.style.backgroundColor = '#d3af37';
         button.style.color = '#000000';
@@ -44,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Fix current page text color
   function fixCurrentPageText() {
-    if (!isMobile()) return;
+    if (!isMobileOrTablet()) return;
     
     const currentLink = document.querySelector('.navbar3_link.w--current');
     if (currentLink) {
@@ -89,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Fix banner z-index
   function fixBannerZIndex() {
-    if (!isMobile()) return;
+    if (!isMobileOrTablet()) return;
     
     const banner = document.querySelector('.banner9_component');
     if (banner) {
@@ -111,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Re-run on window resize
   window.addEventListener('resize', function() {
-    if (isMobile()) {
+    if (isMobileOrTablet()) {
       fixSoumissionButton();
       fixCurrentPageText();
       fixBannerZIndex();
