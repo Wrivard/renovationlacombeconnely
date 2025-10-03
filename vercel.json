@@ -1,10 +1,28 @@
 {
-  "cleanUrls": true,
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/(css|js|images|assets|fonts)/(.*)", "destination": "/$1/$2" }
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/([^/]+)",
+      "destination": "/$1.html"
+    },
+    {
+      "source": "/([^/]+)/([^/]+)",
+      "destination": "/$1/$2.html"
+    }
   ],
   "redirects": [
-    { "source": "/:slug.html", "destination": "/:slug", "permanent": true }
+    {
+      "source": "/([^/]+)\\.html",
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/([^/]+)/([^/]+)\\.html",
+      "destination": "/$1/$2",
+      "permanent": true
+    }
   ]
 }
