@@ -265,7 +265,7 @@
 @media screen and (max-width: 767px) {
   /* Fix banner z-index to not overlap mobile menu */
   .banner9_component {
-    z-index: 1 !important;
+    z-index: 0 !important;
     position: relative !important;
   }
   
@@ -274,7 +274,7 @@
   .banner9_content,
   .banner9_social-icons,
   .banner9_social-link {
-    z-index: 1 !important;
+    z-index: 0 !important;
     position: relative !important;
   }
   
