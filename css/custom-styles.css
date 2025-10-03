@@ -1,4 +1,4 @@
-/* Custom styles for Renovation Lacombe Connely */
+/* Custom styles for Renovation Lacombe Connely - Updated 2024-12-19 */
 
 /* Filter button styles */
 .category-filter-menu {
@@ -278,14 +278,25 @@
     position: relative !important;
   }
   
+  /* Force banner to stay below everything */
+  .banner9_component * {
+    z-index: 0 !important;
+  }
+  
   /* Ensure mobile menu has higher z-index than banner */
   .navbar3_menu {
     z-index: 1000 !important;
+    position: relative !important;
   }
   
   /* Ensure mobile menu background also has high z-index */
   .navbar3_menu-background {
     z-index: 999 !important;
+  }
+  
+  /* Force mobile menu to appear above everything */
+  .navbar3_menu * {
+    z-index: 1000 !important;
   }
   
   /* Ensure logo is visible and properly styled in mobile menu */
