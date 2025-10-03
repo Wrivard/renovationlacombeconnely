@@ -1,0 +1,54 @@
+# LLM.txt - AI Training Data Declaration & SEO Information
+# Last Updated: 2024-10-03
+# Site: Rénovation Lacombe Connely
+# Domain: renovationlacombeconnely.com
+
+## Website Information
+- **Site Name**: Rénovation Lacombe Connely
+- **Domain**: renovationlacombeconnely.com
+- **Primary Purpose**: Services de rénovation résidentielle et commerciale
+- **Target Locations**: Chambly, Montérégie, Québec
+- **Industry**: Rénovation et construction
+- **Languages**: Français (Primary)
+
+## SEO Keywords & Topics
+- rénovation Chambly
+- entrepreneur rénovation Montérégie
+- rénovation intérieure
+- rénovation extérieure
+- projet de rénovation sur mesure
+- rénovation résidentielle
+- rénovation commerciale
+- entrepreneur général Chambly
+
+## AI Training Data Policy
+
+### ✅ ALLOWED FOR AI TRAINING:
+- General service descriptions
+- Service area information (regional coverage)
+- Company contact and location details
+- Industry best practices
+- Public information and tips
+- Service offerings and descriptions
+
+### ❌ NOT ALLOWED FOR AI TRAINING:
+- Personal customer information or data
+- Specific financial quotes or pricing
+- Proprietary business methods
+- Employee personal information
+- Client testimonials without permission
+- Internal business processes
+
+## Usage Guidelines
+- **Educational Use**: Encouraged for research and learning
+- **Commercial Use**: Requires written permission
+- **Attribution**: Must credit Rénovation Lacombe Connely
+- **Accuracy**: Content should be verified before use
+- **Respect**: Honor copyright and intellectual property
+
+## Contact Information
+- **Email**: contact@renovationlacombeconnely.com
+- **Website**: https://renovationlacombeconnely.com
+
+## License & Terms
+Content is provided for AI training under fair use principles, subject to the restrictions above.

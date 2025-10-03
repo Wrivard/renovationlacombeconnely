@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://renovationlacombeconnely.com/</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Contact/Form pages -->
+  <url>
+    <loc>https://renovationlacombeconnely.com/soumission</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Service pages -->
+  <url>
+    <loc>https://renovationlacombeconnely.com/services/projet-de-renovation-sur-mesure</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://renovationlacombeconnely.com/services/realisations</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://renovationlacombeconnely.com/services/renovation-exterieur</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://renovationlacombeconnely.com/services/renovation-interieur</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- About page -->
+  <url>
+    <loc>https://renovationlacombeconnely.com/a-propos</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Location pages -->
+  <url>
+    <loc>https://renovationlacombeconnely.com/renovation-a-chambly</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Legal pages -->
+  <url>
+    <loc>https://renovationlacombeconnely.com/politique-de-cookie</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>
