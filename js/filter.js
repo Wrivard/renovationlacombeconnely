@@ -44,4 +44,17 @@ document.addEventListener('DOMContentLoaded', function() {
   if (showAllButton) {
     showAllButton.classList.add('active');
   }
+  
+  // Check if there's a hash in the URL for filtering
+  if (window.location.hash) {
+    const category = window.location.hash.substring(1); // Remove the # character
+    const matchingButton = Array.from(filterButtons).find(btn => {
+      const btnCategory = btn.querySelector('div').textContent.trim().toLowerCase();
+      return btnCategory === category;
+    });
+    
+    if (matchingButton) {
+      matchingButton.click();
+    }
+  }
 });
