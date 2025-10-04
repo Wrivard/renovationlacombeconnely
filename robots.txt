@@ -1,36 +1,19 @@
-# SEO-Optimized Robots.txt
-# Last Updated: 2024-10-03
-
-# Allow all search engines
 User-agent: *
 Allow: /
 
-# Block technical and non-content files
-Disallow: /css/
-Disallow: /js/
-Disallow: /api/
-Disallow: /style-guide-*.html
-Disallow: /401.html
-Disallow: /404.html
-Disallow: /.git/
-Disallow: /package.json
+# Sitemap
+Sitemap: https://renovationlacombeconnely.vercel.app/sitemap.xml
 
-# Allow important images for SEO
-Allow: /images/*.jpg
-Allow: /images/*.jpeg
-Allow: /images/*.png
-Allow: /images/*.svg
-Allow: /images/*.webp
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
 
-# Sitemap location
-Sitemap: https://renovationlacombeconnely.com/sitemap.xml
+# Allow all search engines to crawl the site
+User-agent: Googlebot
+Allow: /
 
-# Block AI training bots
-User-agent: GPTBot
-Disallow: /
+User-agent: Bingbot
+Allow: /
 
-User-agent: ChatGPT-User
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
+User-agent: Slurp
+Allow: /
