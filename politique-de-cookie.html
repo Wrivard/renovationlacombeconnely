@@ -22,344 +22,97 @@
   
   <!-- Modern Cookie Policy Styles -->
   <style>
-    /* Policy Section Styling */
-    .policy-section {
-      margin-bottom: 3rem;
-      padding: 2rem;
-      background: #ffffff;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #e9ecef;
-      transition: all 0.3s ease;
-    }
-
-    .policy-section:hover {
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-      transform: translateY(-2px);
-    }
-
-    .policy-section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid #f8f9fa;
-    }
-
-    .policy-section-header h2 {
-      margin: 0;
+    /* Clean Content Styling */
+    .text-rich-text h2 {
       color: #2c3e50;
       font-size: 1.5rem;
       font-weight: 700;
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #d3af37;
     }
 
-    .policy-badge {
-      background: linear-gradient(135deg, #d3af37, #b8941f);
-      color: #000;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
+    .text-rich-text h3 {
+      color: #2c3e50;
+      font-size: 1.2rem;
       font-weight: 600;
+      margin: 1.5rem 0 0.75rem 0;
+    }
+
+    .text-rich-text h4 {
+      color: #2c3e50;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .text-rich-text p {
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .text-rich-text ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .text-rich-text li {
+      margin-bottom: 0.5rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .text-rich-text strong {
+      color: #2c3e50;
+      font-weight: 600;
+    }
+
+    .text-rich-text em {
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Cookie Table Styling */
+    .cookie-table-container {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .cookie-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cookie-table thead {
+      background: #d3af37;
+      color: #000;
+    }
+
+    .cookie-table th,
+    .cookie-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #e9ecef;
+    }
+
+    .cookie-table th {
+      font-weight: 600;
+      font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
-    .policy-content {
-      color: #555;
-      line-height: 1.7;
-    }
-
-    /* Cookie Type Cards */
-    .cookie-type-card {
+    .cookie-table tbody tr:hover {
       background: #f8f9fa;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-left: 4px solid #d3af37;
-      transition: all 0.3s ease;
     }
 
-    .cookie-type-card:hover {
-      background: #f1f3f4;
-      transform: translateX(4px);
-    }
-
-    .cookie-type-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-
-    .cookie-icon {
-      font-size: 1.5rem;
-      margin-right: 0.75rem;
-    }
-
-    .cookie-type-header h3 {
-      margin: 0;
-      color: #2c3e50;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    .cookie-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .cookie-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-    }
-
-    .cookie-item strong {
-      color: #d3af37;
-      font-weight: 600;
-    }
-
-    .cookie-item span {
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* Legal Basis Grid */
-    .legal-basis-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .legal-basis-card {
-      background: #ffffff;
-      border: 2px solid #e9ecef;
-      border-radius: 12px;
-      padding: 1.5rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .legal-basis-card:hover {
-      border-color: #d3af37;
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(211, 175, 55, 0.15);
-    }
-
-    .legal-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .legal-basis-card h4 {
-      margin: 0 0 0.5rem 0;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .legal-basis-card p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* Rights Grid */
-    .rights-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .right-card {
-      background: #ffffff;
-      border: 1px solid #e9ecef;
-      border-radius: 12px;
-      padding: 1.25rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .right-card:hover {
-      border-color: #d3af37;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(211, 175, 55, 0.1);
-    }
-
-    .right-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .right-card h4 {
-      margin: 0 0 0.5rem 0;
-      color: #2c3e50;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .right-card p {
-      margin: 0;
-      color: #666;
-      font-size: 0.85rem;
-      line-height: 1.4;
-    }
-
-    /* Timeline */
-    .retention-timeline {
-      margin-top: 1.5rem;
-      position: relative;
-    }
-
-    .timeline-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-      position: relative;
-    }
-
-    .timeline-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 24px;
-      bottom: -24px;
-      width: 2px;
-      background: #d3af37;
-    }
-
-    .timeline-dot {
-      width: 16px;
-      height: 16px;
-      background: #d3af37;
-      border-radius: 50%;
-      margin-right: 1rem;
-      flex-shrink: 0;
-      margin-top: 4px;
-    }
-
-    .timeline-content h4 {
-      margin: 0 0 0.25rem 0;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .timeline-content p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* Preference Options */
-    .preference-options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .preference-option {
-      background: #f8f9fa;
-      border-radius: 12px;
-      padding: 1.25rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .preference-option:hover {
-      background: #e9ecef;
-      transform: translateY(-2px);
-    }
-
-    .option-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .preference-option h4 {
-      margin: 0 0 0.5rem 0;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .preference-option p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-
-    /* Security Highlight */
-    .security-highlight {
-      background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
-      border: 2px solid #d3af37;
-      border-radius: 12px;
-      padding: 1.5rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-    }
-
-    .security-icon {
-      font-size: 1.5rem;
-      margin-top: 0.25rem;
-    }
-
-    /* Contact Info */
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      background: #f8f9fa;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .contact-item:hover {
-      background: #e9ecef;
-      transform: translateX(4px);
-    }
-
-    .contact-icon {
-      font-size: 1.25rem;
-      color: #d3af37;
-    }
-
-    .contact-details h4 {
-      margin: 0 0 0.25rem 0;
-      color: #2c3e50;
-      font-weight: 600;
-    }
-
-    .contact-details p {
-      margin: 0;
-      color: #666;
-    }
-
-    .complaint-info {
-      background: #fff3cd;
-      border: 1px solid #ffeaa7;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .last-updated {
-      background: #e9ecef;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      margin-top: 1.5rem;
-      color: #666;
+    .cookie-table tbody tr:last-child td {
+      border-bottom: none;
     }
 
     /* Table of Contents */
@@ -388,26 +141,6 @@
       border-color: #b8941f;
     }
 
-    .toc-number {
-      background: #d3af37;
-      color: #000;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 0.8rem;
-      margin-right: 0.75rem;
-      flex-shrink: 0;
-    }
-
-    .toc-link:hover .toc-number {
-      background: #000;
-      color: #d3af37;
-    }
-
     .toc-text {
       font-weight: 500;
       font-size: 0.9rem;
@@ -415,39 +148,21 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      .policy-section {
-        padding: 1.5rem;
-        margin-bottom: 2rem;
+      .cookie-table-container {
+        font-size: 0.9rem;
       }
 
-      .policy-section-header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+      .cookie-table th,
+      .cookie-table td {
+        padding: 0.75rem 0.5rem;
       }
 
-      .legal-basis-grid,
-      .rights-grid,
-      .preference-options {
-        grid-template-columns: 1fr;
+      .text-rich-text h2 {
+        font-size: 1.3rem;
       }
 
-      .contact-item {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .timeline-item {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .timeline-item:not(:last-child)::after {
-        display: none;
-      }
-
-      .timeline-dot {
-        margin-bottom: 0.5rem;
+      .text-rich-text h3 {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -784,307 +499,107 @@ margin: 0rem !important;
                 <div id="w-node-aa1a5ca3-d4f2-eff5-c586-074d61c8a9c6-0553fd21" class="max-width-large">
                   <div fs-toc-element="contents" class="text-rich-text w-richtext">
                     
-                    <!-- Section 1: Conformité Loi 25 -->
-                    <div class="policy-section" id="conformite-loi25">
-                      <div class="policy-section-header">
-                        <h2>1. Conformité à la Loi 25 du Québec</h2>
-                        <div class="policy-badge">Loi 25</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Rénovation Lacombe Connely s'engage à respecter la <strong>Loi 25 sur la protection des renseignements personnels dans le secteur privé</strong> du Québec. Cette politique de cookies explique comment nous collectons, utilisons et protégeons vos renseignements personnels conformément à cette législation québécoise.</p>
-                      </div>
+                    <p><strong>Dernière mise à jour : 19 décembre 2024</strong></p>
+
+                    <h2 id="cookies-utilisation">Cookies et Utilisation</h2>
+                    <p>Cette politique de témoins de connexion explique comment notre site web utilise les témoins de connexion et technologies similaires pour reconnaître votre visite, comprendre vos préférences, et vous fournir une expérience personnalisée. Cette politique est conforme à la <strong>Loi 25 du Québec</strong> sur la protection des renseignements personnels.</p>
+
+                    <h3>Qu'est-ce qu'un témoin de connexion (cookie)?</h3>
+                    <p>Un témoin de connexion est un petit fichier texte placé sur votre appareil lors de votre visite sur notre site. Il permet au site de mémoriser vos actions et préférences pendant une période déterminée, afin que vous n'ayez pas à les réintroduire à chaque fois que vous visitez le site ou naviguez d'une page à l'autre.</p>
+
+                    <h2 id="types-cookies">Types de Cookies</h2>
+                    <p>Nous utilisons différents types de témoins de connexion pour diverses raisons:</p>
+
+                    <h3>Témoins nécessaires</h3>
+                    <p>Ces témoins sont essentiels au fonctionnement de notre site web. Ils vous permettent de naviguer sur le site et d'utiliser ses fonctionnalités, comme l'accès aux zones sécurisées et la soumission de formulaires.</p>
+
+                    <h3>Témoins fonctionnels</h3>
+                    <p>Ces témoins permettent à notre site web de se souvenir des choix que vous faites et fournissent des fonctionnalités améliorées et plus personnalisées.</p>
+
+                    <h3>Témoins analytiques</h3>
+                    <p>Ces témoins nous permettent de compter les visites et les sources de trafic afin que nous puissions mesurer et améliorer la performance de notre site.</p>
+
+                    <h3>Témoins de marketing</h3>
+                    <p>Ces témoins sont utilisés pour suivre les visiteurs sur les sites web. L'intention est d'afficher des publicités qui sont pertinentes et engageantes pour l'utilisateur individuel.</p>
+
+                    <h2 id="gestion-cookies">Gestion des Cookies</h2>
+
+                    <h3>Liste détaillée des témoins utilisés</h3>
+                    <div class="cookie-table-container">
+                      <table class="cookie-table">
+                        <thead>
+                          <tr>
+                            <th>Nom</th>
+                            <th>Type</th>
+                            <th>Durée</th>
+                            <th>Finalité</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>cookieConsent</td>
+                            <td>Nécessaire</td>
+                            <td>12 mois</td>
+                            <td>Stocke vos préférences concernant les témoins de connexion</td>
+                          </tr>
+                          <tr>
+                            <td>session</td>
+                            <td>Nécessaire</td>
+                            <td>Session</td>
+                            <td>Maintient votre session active</td>
+                          </tr>
+                          <tr>
+                            <td>_ga, _gid</td>
+                            <td>Analytique</td>
+                            <td>2 ans, 24h</td>
+                            <td>Google Analytics - Mesure l'utilisation du site</td>
+                          </tr>
+                          <tr>
+                            <td>_fbp</td>
+                            <td>Marketing</td>
+                            <td>3 mois</td>
+                            <td>Facebook Pixel - Suivi des conversions</td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
 
-                    <!-- Section 2: Qu'est-ce qu'un cookie -->
-                    <div class="policy-section" id="definition-cookie">
-                      <div class="policy-section-header">
-                        <h2>2. Qu'est-ce qu'un cookie ?</h2>
-                        <div class="policy-badge">Définition</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez notre site web. Ils nous permettent de reconnaître votre appareil et de mémoriser certaines informations sur vos préférences ou actions passées.</p>
-                      </div>
-                    </div>
+                    <h3>Comment gérer vos préférences</h3>
+                    <p>Vous pouvez modifier vos préférences concernant les témoins de connexion à tout moment. La plupart des navigateurs web vous permettent de contrôler les témoins via leurs paramètres. Vous pouvez généralement trouver ces paramètres dans le menu "Options" ou "Préférences" de votre navigateur.</p>
 
-                    <!-- Section 3: Types de cookies -->
-                    <div class="policy-section" id="types-cookies">
-                      <div class="policy-section-header">
-                        <h2>3. Types de cookies utilisés</h2>
-                        <div class="policy-badge">Catégories</div>
-                      </div>
-                      <div class="policy-content">
-                        
-                        <div class="cookie-type-card">
-                          <div class="cookie-type-header">
-                            <div class="cookie-icon">🔒</div>
-                            <h3>3.1 Cookies strictement nécessaires</h3>
-                          </div>
-                          <p>Ces cookies sont essentiels au fonctionnement de notre site web et ne peuvent pas être désactivés.</p>
-                          <div class="cookie-list">
-                            <div class="cookie-item">
-                              <strong>Cookies de session</strong>
-                              <span>Maintiennent votre session active pendant votre visite</span>
-                            </div>
-                            <div class="cookie-item">
-                              <strong>Cookies de sécurité</strong>
-                              <span>Protègent contre les attaques et maintiennent la sécurité du site</span>
-                            </div>
-                            <div class="cookie-item">
-                              <strong>Cookies de préférences</strong>
-                              <span>Mémorisent vos choix de langue et paramètres de base</span>
-                            </div>
-                          </div>
-                        </div>
+                    <h4>Instructions par navigateur:</h4>
+                    <ul>
+                      <li><strong>Chrome:</strong> Paramètres > Confidentialité et sécurité > Cookies</li>
+                      <li><strong>Firefox:</strong> Paramètres > Vie privée et sécurité > Cookies</li>
+                      <li><strong>Safari:</strong> Préférences > Confidentialité > Cookies</li>
+                      <li><strong>Edge:</strong> Paramètres > Cookies et autorisations de site</li>
+                    </ul>
 
-                        <div class="cookie-type-card">
-                          <div class="cookie-type-header">
-                            <div class="cookie-icon">⚙️</div>
-                            <h3>3.2 Cookies fonctionnels</h3>
-                          </div>
-                          <p>Ces cookies améliorent les fonctionnalités du site web.</p>
-                          <div class="cookie-list">
-                            <div class="cookie-item">
-                              <strong>Préférences de navigation</strong>
-                              <span>Mémorisation de vos choix d'interface</span>
-                            </div>
-                            <div class="cookie-item">
-                              <strong>Personnalisation</strong>
-                              <span>Amélioration de l'expérience utilisateur</span>
-                            </div>
-                          </div>
-                        </div>
+                    <h2 id="informations-collectees">Informations Collectées</h2>
 
-                        <div class="cookie-type-card">
-                          <div class="cookie-type-header">
-                            <div class="cookie-icon">📊</div>
-                            <h3>3.3 Cookies analytiques</h3>
-                          </div>
-                          <p>Ces cookies nous aident à comprendre comment vous utilisez notre site.</p>
-                          <div class="cookie-list">
-                            <div class="cookie-item">
-                              <strong>Google Analytics</strong>
-                              <span>Analyse du trafic et du comportement des utilisateurs</span>
-                            </div>
-                            <div class="cookie-item">
-                              <strong>Performance</strong>
-                              <span>Mesure des performances du site web</span>
-                            </div>
-                          </div>
-                        </div>
+                    <h3>Transfert de données à des tiers</h3>
+                    <p>Les informations collectées par les témoins de connexion peuvent être partagées avec les tiers suivants:</p>
+                    <ul>
+                      <li><strong>Google Analytics</strong> pour l'analyse du trafic web</li>
+                      <li><strong>Facebook</strong> pour le suivi des conversions publicitaires</li>
+                      <li><strong>Google reCAPTCHA</strong> pour la protection contre le spam sur nos formulaires</li>
+                    </ul>
+                    <p><strong>⚠️ Note:</strong> Ces tiers peuvent être situés dans des pays où les lois sur la protection des données diffèrent de celles du Québec et du Canada.</p>
 
-                        <div class="cookie-type-card">
-                          <div class="cookie-type-header">
-                            <div class="cookie-icon">📢</div>
-                            <h3>3.4 Cookies marketing</h3>
-                          </div>
-                          <p>Ces cookies sont utilisés pour la publicité ciblée.</p>
-                          <div class="cookie-list">
-                            <div class="cookie-item">
-                              <strong>Facebook Pixel</strong>
-                              <span>Suivi des conversions et publicités ciblées</span>
-                            </div>
-                            <div class="cookie-item">
-                              <strong>Publicités personnalisées</strong>
-                              <span>Publicités ciblées sur les réseaux sociaux</span>
-                            </div>
-                          </div>
-                        </div>
+                    <h3>Vos droits</h3>
+                    <p>Conformément à la Loi 25 du Québec, vous avez le droit:</p>
+                    <ul>
+                      <li>✓ D'être informé sur la collecte et l'utilisation de vos données personnelles</li>
+                      <li>✓ D'accéder aux données personnelles que nous détenons sur vous</li>
+                      <li>✓ De demander la rectification ou l'effacement de vos données personnelles</li>
+                      <li>✓ De retirer votre consentement à tout moment</li>
+                      <li>✓ De déposer une plainte auprès de la Commission d'accès à l'information du Québec</li>
+                    </ul>
 
-                      </div>
-                    </div>
+                    <h3>Modifications de cette politique</h3>
+                    <p>Nous pouvons mettre à jour cette politique de temps à autre. Nous vous encourageons à consulter régulièrement cette page pour rester informé des changements. Les modifications importantes seront communiquées par un avis sur notre site web.</p>
 
-                    <!-- Section 4: Base légale -->
-                    <div class="policy-section" id="base-legale">
-                      <div class="policy-section-header">
-                        <h2>4. Base légale selon la Loi 25</h2>
-                        <div class="policy-badge">Légal</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Conformément à la Loi 25, nous collectons et utilisons vos renseignements personnels sur les bases suivantes :</p>
-                        <div class="legal-basis-grid">
-                          <div class="legal-basis-card">
-                            <div class="legal-icon">✓</div>
-                            <h4>Consentement</h4>
-                            <p>Pour les cookies non essentiels, nous obtenons votre consentement explicite</p>
-                          </div>
-                          <div class="legal-basis-card">
-                            <div class="legal-icon">⚖️</div>
-                            <h4>Intérêt légitime</h4>
-                            <p>Pour améliorer nos services et votre expérience utilisateur</p>
-                          </div>
-                          <div class="legal-basis-card">
-                            <div class="legal-icon">📋</div>
-                            <h4>Exécution contractuelle</h4>
-                            <p>Pour fournir les services de rénovation demandés</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Section 5: Vos droits -->
-                    <div class="policy-section" id="vos-droits">
-                      <div class="policy-section-header">
-                        <h2>5. Vos droits selon la Loi 25</h2>
-                        <div class="policy-badge">Droits</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>En tant que résident du Québec, vous avez les droits suivants :</p>
-                        <div class="rights-grid">
-                          <div class="right-card">
-                            <div class="right-icon">👁️</div>
-                            <h4>Droit d'accès</h4>
-                            <p>Demander quels renseignements personnels nous détenons sur vous</p>
-                          </div>
-                          <div class="right-card">
-                            <div class="right-icon">✏️</div>
-                            <h4>Droit de rectification</h4>
-                            <p>Corriger des renseignements inexacts</p>
-                          </div>
-                          <div class="right-card">
-                            <div class="right-icon">🚫</div>
-                            <h4>Droit de retrait</h4>
-                            <p>Retirer votre consentement à tout moment</p>
-                          </div>
-                          <div class="right-card">
-                            <div class="right-icon">📤</div>
-                            <h4>Droit de portabilité</h4>
-                            <p>Recevoir vos données dans un format structuré</p>
-                          </div>
-                          <div class="right-card">
-                            <div class="right-icon">🗑️</div>
-                            <h4>Droit d'effacement</h4>
-                            <p>Demander la suppression de vos renseignements personnels</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Section 6: Durée conservation -->
-                    <div class="policy-section" id="duree-conservation">
-                      <div class="policy-section-header">
-                        <h2>6. Durée de conservation</h2>
-                        <div class="policy-badge">Durée</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Nous conservons vos renseignements personnels uniquement le temps nécessaire aux fins pour lesquelles ils ont été collectés :</p>
-                        <div class="retention-timeline">
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <h4>Cookies de session</h4>
-                              <p>Supprimés à la fermeture du navigateur</p>
-                            </div>
-                          </div>
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <h4>Cookies persistants</h4>
-                              <p>12 à 24 mois maximum</p>
-                            </div>
-                          </div>
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <h4>Données analytiques</h4>
-                              <p>26 mois maximum (Google Analytics)</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Section 7: Gestion préférences -->
-                    <div class="policy-section" id="gestion-preferences">
-                      <div class="policy-section-header">
-                        <h2>7. Gestion de vos préférences</h2>
-                        <div class="policy-badge">Contrôle</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Vous pouvez gérer vos préférences de cookies de plusieurs façons :</p>
-                        <div class="preference-options">
-                          <div class="preference-option">
-                            <div class="option-icon">🎛️</div>
-                            <h4>Gestionnaire intégré</h4>
-                            <p>Utiliser notre gestionnaire de préférences ci-dessus</p>
-                          </div>
-                          <div class="preference-option">
-                            <div class="option-icon">🌐</div>
-                            <h4>Paramètres navigateur</h4>
-                            <p>Modifier les paramètres de votre navigateur</p>
-                          </div>
-                          <div class="preference-option">
-                            <div class="option-icon">📞</div>
-                            <h4>Contact direct</h4>
-                            <p>Nous contacter directement pour exercer vos droits</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Section 8: Sécurité -->
-                    <div class="policy-section" id="securite-donnees">
-                      <div class="policy-section-header">
-                        <h2>8. Sécurité des données</h2>
-                        <div class="policy-badge">Sécurité</div>
-                      </div>
-                      <div class="policy-content">
-                        <div class="security-highlight">
-                          <div class="security-icon">🛡️</div>
-                          <p>Nous mettons en place des mesures de sécurité appropriées pour protéger vos renseignements personnels contre l'accès non autorisé, la modification, la divulgation ou la destruction.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Section 9: Contact -->
-                    <div class="policy-section" id="contact-reclamations">
-                      <div class="policy-section-header">
-                        <h2>9. Contact et réclamations</h2>
-                        <div class="policy-badge">Contact</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Pour toute question concernant cette politique de cookies ou pour exercer vos droits :</p>
-                        <div class="contact-info">
-                          <div class="contact-item">
-                            <div class="contact-icon">📧</div>
-                            <div class="contact-details">
-                              <h4>Email</h4>
-                              <p>info@renovationlc.com</p>
-                            </div>
-                          </div>
-                          <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div class="contact-details">
-                              <h4>Téléphone</h4>
-                              <p>(514) 265-6461</p>
-                            </div>
-                          </div>
-                          <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div class="contact-details">
-                              <h4>Adresse</h4>
-                              <p>36 Dufour, Chambly, QC, J3L 6B7</p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="complaint-info">
-                          <p>Vous pouvez également déposer une plainte auprès de la <strong>Commission d'accès à l'information du Québec (CAI)</strong> si vous estimez que vos droits ne sont pas respectés.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Section 10: Modifications -->
-                    <div class="policy-section" id="modifications">
-                      <div class="policy-section-header">
-                        <h2>10. Modifications de cette politique</h2>
-                        <div class="policy-badge">Mise à jour</div>
-                      </div>
-                      <div class="policy-content">
-                        <p>Nous pouvons modifier cette politique de cookies pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. Nous vous informerons de tout changement important.</p>
-                        <div class="last-updated">
-                          <strong>Dernière mise à jour :</strong> 19 décembre 2024
-                        </div>
-                      </div>
-                    </div>
+                    <p><em>Cette politique respecte les exigences de la Loi 25 du Québec sur la protection des renseignements personnels et est adaptée aux besoins spécifiques de notre entreprise de rénovation.</em></p>
 
                   </div>
                 </div>
@@ -1098,45 +613,17 @@ margin: 0rem !important;
                   <div class="margin-top margin-xsmall">
                     <div data-w-id="aa1a5ca3-d4f2-eff5-c586-074d61c8a9e8" class="content28_link-content">
                       <div class="toc-container">
-                        <a href="#conformite-loi25" class="toc-link">
-                          <div class="toc-number">1</div>
-                          <div class="toc-text">Conformité Loi 25</div>
-                        </a>
-                        <a href="#definition-cookie" class="toc-link">
-                          <div class="toc-number">2</div>
-                          <div class="toc-text">Qu'est-ce qu'un cookie ?</div>
+                        <a href="#cookies-utilisation" class="toc-link">
+                          <div class="toc-text">Cookies et Utilisation</div>
                         </a>
                         <a href="#types-cookies" class="toc-link">
-                          <div class="toc-number">3</div>
-                          <div class="toc-text">Types de cookies</div>
+                          <div class="toc-text">Types de Cookies</div>
                         </a>
-                        <a href="#base-legale" class="toc-link">
-                          <div class="toc-number">4</div>
-                          <div class="toc-text">Base légale Loi 25</div>
+                        <a href="#gestion-cookies" class="toc-link">
+                          <div class="toc-text">Gestion des Cookies</div>
                         </a>
-                        <a href="#vos-droits" class="toc-link">
-                          <div class="toc-number">5</div>
-                          <div class="toc-text">Vos droits</div>
-                        </a>
-                        <a href="#duree-conservation" class="toc-link">
-                          <div class="toc-number">6</div>
-                          <div class="toc-text">Durée conservation</div>
-                        </a>
-                        <a href="#gestion-preferences" class="toc-link">
-                          <div class="toc-number">7</div>
-                          <div class="toc-text">Gestion préférences</div>
-                        </a>
-                        <a href="#securite-donnees" class="toc-link">
-                          <div class="toc-number">8</div>
-                          <div class="toc-text">Sécurité données</div>
-                        </a>
-                        <a href="#contact-reclamations" class="toc-link">
-                          <div class="toc-number">9</div>
-                          <div class="toc-text">Contact & réclamations</div>
-                        </a>
-                        <a href="#modifications" class="toc-link">
-                          <div class="toc-number">10</div>
-                          <div class="toc-text">Modifications</div>
+                        <a href="#informations-collectees" class="toc-link">
+                          <div class="toc-text">Informations Collectées</div>
                         </a>
                       </div>
                     </div>
