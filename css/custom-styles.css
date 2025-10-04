@@ -546,17 +546,6 @@
   width: 100% !important;
 }
 
-.error-404-image {
-  max-width: 200px !important;
-  height: auto !important;
-  margin-bottom: 50px !important;
-  filter: drop-shadow(0 10px 30px rgba(211, 175, 55, 0.2)) !important;
-  transition: transform 0.3s ease !important;
-}
-
-.error-404-image:hover {
-  transform: translateY(-5px) !important;
-}
 
 .error-404-number {
   font-family: 'Raleway', sans-serif !important;
@@ -666,8 +655,4 @@
     font-size: 15px !important;
   }
   
-  .error-404-image {
-    max-width: 150px !important;
-    margin-bottom: 40px !important;
-  }
 }
