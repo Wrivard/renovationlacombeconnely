@@ -514,49 +514,51 @@
 
 /* Custom 404 page styles */
 .error-404-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
-  text-align: center;
-  min-height: 60vh;
-  background-color: #f9f9f9;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 80px 20px !important;
+  text-align: center !important;
+  min-height: 60vh !important;
+  background-color: #f9f9f9 !important;
+  margin: 0 !important;
+  width: 100% !important;
 }
 
 .error-404-image {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 40px;
-  max-height: 300px;
+  max-width: 100% !important;
+  height: auto !important;
+  margin-bottom: 40px !important;
+  max-height: 300px !important;
 }
 
 .error-404-title {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  color: #d3af37;
-  font-weight: 700;
+  font-size: 3.5rem !important;
+  margin-bottom: 20px !important;
+  color: #d3af37 !important;
+  font-weight: 700 !important;
 }
 
 .error-404-text {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  max-width: 600px;
-  color: #333;
-  line-height: 1.6;
+  font-size: 1.2rem !important;
+  margin-bottom: 30px !important;
+  max-width: 600px !important;
+  color: #333 !important;
+  line-height: 1.6 !important;
 }
 
 .error-404-button {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #d3af37;
-  color: #000;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: none;
-  font-size: 16px;
+  display: inline-block !important;
+  padding: 12px 25px !important;
+  background-color: #d3af37 !important;
+  color: #000 !important;
+  text-decoration: none !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  font-size: 16px !important;
 }
 
 .error-404-button:hover {
@@ -567,18 +569,18 @@
 
 @media screen and (max-width: 767px) {
   .error-404-container {
-    padding: 60px 20px;
+    padding: 60px 20px !important;
   }
   
   .error-404-title {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
   
   .error-404-text {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
   
   .error-404-button {
-    padding: 10px 20px;
+    padding: 10px 20px !important;
   }
 }
